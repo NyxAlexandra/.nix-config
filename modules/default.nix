@@ -2,6 +2,7 @@
   imports = [
     ./home-manager
 
+    ./boot.nix
     ./console.nix
     ./environment.nix
     ./hardware.nix

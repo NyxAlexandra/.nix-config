@@ -16,6 +16,8 @@
       rust-analyzer
       wl-clipboard
       htop
+      firefox
+      gnomeExtensions.just-perfection
     ];
     variables = {
       "EDITOR" = "hx";

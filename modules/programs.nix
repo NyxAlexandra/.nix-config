@@ -5,5 +5,6 @@
       enableSSHSupport = true;
     };
     dconf.enable = true;
+    hyprland.enable = true;
   };
 }

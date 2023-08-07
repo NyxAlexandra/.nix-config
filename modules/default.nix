@@ -5,6 +5,7 @@
     ./boot.nix
     ./console.nix
     ./environment.nix
+    ./fonts.nix
     ./hardware.nix
     ./programs.nix
     ./services.nix

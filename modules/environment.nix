@@ -18,10 +18,16 @@
       htop
       firefox
       gnomeExtensions.just-perfection
+      zig
+      element-desktop
+      wofi
+      waybar
     ];
     variables = {
       "EDITOR" = "hx";
       "MOZ_ENABLE_WAYLAND" = "1";
     };
+    # add `~/.local/bin` to `$PATH`
+    localBinInPath = true;
   };
 }

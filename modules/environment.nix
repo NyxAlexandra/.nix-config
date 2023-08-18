@@ -22,6 +22,7 @@
       element-desktop
       wofi
       waybar
+      lldb
     ];
     variables = {
       "EDITOR" = "hx";

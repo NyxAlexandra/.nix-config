@@ -23,6 +23,7 @@
       wofi
       waybar
       lldb
+      kitty
     ];
     variables = {
       "EDITOR" = "hx";

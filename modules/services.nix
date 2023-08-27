@@ -23,5 +23,6 @@
     auto-cpufreq.enable = true;
     dbus.enable = true;
     openssh.enable = true;
+    printing.enable = true;
   };
 }

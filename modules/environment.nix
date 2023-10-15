@@ -24,6 +24,7 @@
       waybar
       lldb
       kitty
+      zls
     ];
     variables = {
       "EDITOR" = "hx";

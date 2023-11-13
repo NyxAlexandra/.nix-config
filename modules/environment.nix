@@ -25,6 +25,7 @@
       lldb
       kitty
       zls
+      neovim
     ];
     variables = {
       "EDITOR" = "hx";

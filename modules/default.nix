@@ -7,6 +7,7 @@
     ./environment.nix
     ./fonts.nix
     ./hardware.nix
+    ./i18n.nix
     ./programs.nix
     ./services.nix
     ./xdg.nix

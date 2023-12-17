@@ -29,7 +29,7 @@
     };
   in {
     nixosConfigurations."${hostName}" = nixpkgs.lib.nixosSystem {
-      inherit system;
+      inherit system pkgs;
 
       specialArgs = { inherit inputs system; };
       modules = [

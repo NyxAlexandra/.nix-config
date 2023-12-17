@@ -1,12 +1,12 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/12a0ade5e458984675b9789a4b260ebabdd2d1ab";
     nixos-apple-silicon.url = "github:tpwrules/nixos-apple-silicon";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    impermanence.url = "github:nix-community/impermanence";
   };
 
   outputs =
@@ -14,7 +14,6 @@
     , nixpkgs
     , nixos-apple-silicon
     , home-manager
-    , impermanence
     , ...
     } @ inputs : let
     # heh
@@ -36,13 +35,11 @@
       modules = [
         nixos-apple-silicon.nixosModules.default
         home-manager.nixosModules.default
-        impermanence.nixosModule
 
         ./modules
 
         ./hardware-configuration.nix
 
-        # essential configuration
         {
           users = {
             mutableUsers = false; # false => only mutable through Nix

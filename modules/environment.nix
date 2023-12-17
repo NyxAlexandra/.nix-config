@@ -26,6 +26,7 @@
       kitty
       zls
       neovim
+      vscode
     ];
     variables = {
       "EDITOR" = "hx";

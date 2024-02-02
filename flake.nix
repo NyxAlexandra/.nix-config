@@ -1,7 +1,7 @@
 {
   inputs = {
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:nixos/nixpkgs/12a0ade5e458984675b9789a4b260ebabdd2d1ab";
+    nixpkgs.url = "github:nixos/nixpkgs/c3e128f3c0ecc1fb04aef9f72b3dcc2f6cecf370";
     nixos-apple-silicon.url = "github:tpwrules/nixos-apple-silicon";
     home-manager = {
       url = "github:nix-community/home-manager";

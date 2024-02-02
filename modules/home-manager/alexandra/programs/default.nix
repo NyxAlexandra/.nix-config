@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   imports = [
+    ./alacritty.nix
     ./git.nix
     ./helix.nix
     ./vscode.nix

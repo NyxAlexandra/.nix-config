@@ -16,6 +16,7 @@
       s = "status";
       d = "diff";
     };
+    extraConfig.push.autoSetupRemote = true;
   };
 
   home.packages = with pkgs; [ gnupg ];

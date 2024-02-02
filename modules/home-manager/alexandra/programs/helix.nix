@@ -11,7 +11,7 @@
         bufferline = "multiple";
         color-modes = true;
         cursorline = true;
-        ident-guides = {
+        indent-guides = {
           render = true;
           character = "╎";
           idle-timeout = 0;
@@ -31,7 +31,7 @@
           select = "underline";
         };
         file-picker.hidden = false;
-        status-line = {
+        statusline = {
           left = [ "mode" "separator" "file-name" ];
           right = [ "position" ];
           separator = "";
@@ -41,22 +41,22 @@
         };
       };
     };
-    languages = [
-      {
-        name = "typst";
-        scope = "source.typst";
-        injection-regex = "^typ(st)?$";
-        file-types = [ "typ" ];
-        comment-token = "//";
-        indent = {
-          tab-width = 2;
-          unit = "  ";
-        };
-        roots = ["typst.toml"];
-        language-servers = [ "typst-lsp" ];
-        formatter.command = "typstfmt";
-        auto-format = false;
-      }
-    ];
+    # languages = [
+    #   {
+    #     name = "typst";
+    #     scope = "source.typst";
+    #     injection-regex = "^typ(st)?$";
+    #     file-types = [ "typ" ];
+    #     comment-token = "//";
+    #     indent = {
+    #       tab-width = 2;
+    #       unit = "  ";
+    #     };
+    #     roots = ["typst.toml"];
+    #     language-servers = [ "typst-lsp" ];
+    #     formatter.command = "typstfmt";
+    #     auto-format = false;
+    #   }
+    # ];
   };
 }

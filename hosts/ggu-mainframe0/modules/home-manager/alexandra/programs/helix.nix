@@ -8,7 +8,6 @@
         gutters = [ "diff" "line-numbers" "spacer" ];
         completion-trigger-len = 1;
         undercurl = true;
-        bufferline = "multiple";
         color-modes = true;
         cursorline = true;
         indent-guides = {

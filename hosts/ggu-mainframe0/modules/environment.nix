@@ -6,7 +6,7 @@
       gnome.gnome-tweaks
       noto-fonts
       noto-fonts-cjk
-      (nerdfonts.override { fonts = [ "Noto" "Lilex" ]; })
+      nerdfonts
       alacritty
       rustup
       papirus-icon-theme

@@ -184,10 +184,10 @@ themes {
 }
 
 theme "rose-pine"
-layout "minimal"
+default_layout "minimal"
 
 plugins {
-    tab-bar { path "tab-bar"; }
+    compact-bar { path "compact-bar"; }
 }
 
 ui {

@@ -1,11 +1,11 @@
-{ pkgs, ... }: {
+{ signingKey ? null }: { pkgs, ... }: {
   programs.git = {
     enable = true;
     userName = "Alexandra Reaves";
     userEmail = "nyxalexandra@proton.me";
     signing = {
       signByDefault = true;
-      key = "F3CE7E4CB256E3AF"; # acquired with `gpg --list-secret-keys --keyid-format=long`
+      key = "${signingKey}"; # acquired with `gpg --list-secret-keys --keyid-format=long`
     };
     delta.enable = true; # Better diff highlighting
     aliases = {

@@ -184,7 +184,7 @@ themes {
 }
 
 theme "rose-pine"
-default_layout "minimal"
+layout "minimal"
 
 plugins {
     tab-bar { path "tab-bar"; }

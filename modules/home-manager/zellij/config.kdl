@@ -187,7 +187,7 @@ theme "rose-pine"
 default_layout "minimal"
 
 plugins {
-    compact-bar { path "compact-bar"; }
+    tab-bar { path "tab-bar"; }
 }
 
 ui {

@@ -1,19 +1,8 @@
-# Nushell Config File
-#
-# version = 0.80.0
-
-# For more information on defining custom themes, see
-# https://www.nushell.sh/book/coloring_and_theming.html
-# And here is the theme collection
-# https://github.com/nushell/nu_scripts/tree/main/themes
 let dark_theme = {
-    # color for nushell primitives
     separator: white
-    leading_trailing_space_bg: { attr: n } # no fg, no bg, attr none effectively turns this off
+    leading_trailing_space_bg: { attr: n }
     header: green_bold
     empty: blue
-    # Closures can be used to choose colors for specific values.
-    # The value (in this case, a bool) is piped into the closure.
     bool: {|| if $in { 'light_cyan' } else { 'light_gray' } }
     int: white
     filesize: {|e|
@@ -190,9 +179,6 @@ $env.config = {
   }
   rm: {
     always_trash: false # always act as if -t was given. Can be overridden with -p
-  }
-  cd: {
-    abbreviations: false # allows `cd s/o/f` to expand to `cd some/other/folder`
   }
   table: {
     mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
@@ -515,7 +501,6 @@ $env.config = {
         ]
       }
     }
-    # Keybindings used to trigger the user defined menus
     {
       name: commands_menu
       modifier: control

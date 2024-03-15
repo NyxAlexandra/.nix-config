@@ -1,7 +1,7 @@
 { pkgs, ... }: {
-  programs.nushell.enable = true;
-  xdg.configFile."nushell" = {
-    source = ./nushell;
-    recursive = true;
+  programs.nushell = {
+    enable = true;
+    configFile.source = ./nushell/config.nu;
+    envFile.source = ./nushell/env.nu;
   };
 }

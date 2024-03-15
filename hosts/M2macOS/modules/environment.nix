@@ -7,26 +7,25 @@
       neofetch
       nushell
       nixpkgs-fmt
+      google-java-format
     ];
 
-    # Items to add to the path
     systemPath = [
       "~/.cargo/bin"
+      "/run/current-system/sw/bin"
+      "/opt/homebrew/bin"
     ];
 
-    # Allowed shells
     shells = with pkgs; [ nushell ];
 
-    # darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
-
     variables = {
-      "EDITOR" = "nvim";
+      "EDITOR" = "hx";
+      "SHELL" = "nu";
 
       # Taken from `brew shellenv`
       "HOMEBREW_PREFIX" = "/opt/homebrew";
       "HOMEBREW_CELLAR" = "/opt/hoebrew/Cellar";
       "HOMEBREW_REPOSITORY" = "/opt/homebrew";
-      "PATH" = "/opt/homebrew/bin/:/opt/homebrew/sbin:~/.cargo/bin:\${PATH+:$PATH}";
       "MANPATH" = "/opt/homebrew/share/man\${MANPATH+:$MANPATH}:";
       "INFOPATH" = "/opt/homebrew/share/info:\${INFOPATH:-}";
       "CC" = "/usr/bin/clang";

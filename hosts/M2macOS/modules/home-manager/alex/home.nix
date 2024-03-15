@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   imports = [
     ./programs.nix
-    ./config
   ];
 
   home = {

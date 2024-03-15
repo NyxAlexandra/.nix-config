@@ -1,1 +1,12 @@
-import = ["/home/alexandra/.config/alacritty/themes/rose-pine.toml"]
+import = ["~/.config/alacritty/themes/rose-pine.toml"]
+
+[env]
+SHELL = "nu"
+
+[font.normal]
+family = "Lilex Nerd Font"
+style = "Regular"
+
+
+[window]
+option_as_alt = "OnlyLeft"

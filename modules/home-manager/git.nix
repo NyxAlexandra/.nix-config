@@ -16,7 +16,10 @@
       s = "status";
       d = "diff";
     };
-    extraConfig.push.autoSetupRemote = true;
+    extraConfig = {
+      pull.rebase = false;
+      push.autoSetupRemote = true;
+    };
   };
 
   home.packages = with pkgs; [ gnupg ];

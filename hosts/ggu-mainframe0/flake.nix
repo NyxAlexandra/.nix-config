@@ -36,9 +36,17 @@
         nixos-apple-silicon.nixosModules.default
         home-manager.nixosModules.default
 
-        ./modules
-
         ./hardware-configuration.nix
+        ./home-manager
+        ./boot.nix
+        ./console.nix
+        ./environment.nix
+        ./fonts.nix
+        ./hardware.nix
+        ./i18n.nix
+        ./programs.nix
+        ./services.nix
+        ./xdg.nix
 
         {
           users = {

@@ -8,17 +8,9 @@
     };
     xserver = {
       enable = true;
-      displayManager.gdm.enable = true;
-      desktopManager.gnome = {
-        enable = true;
-        extraGSettingsOverridePackages = with pkgs; [ gnome.mutter ];
-        # fractional scaling support
-        extraGSettingsOverrides = ''
-          [org.gnome.mutter]
-          experimental-features=['scale-monitor-framebuffer']
-        '';
-      };
+      displayManager.sddm.enable = true;
     };
+    desktopManager.plasma6.enable = true;
     flatpak.enable = true;
     auto-cpufreq.enable = true;
     dbus.enable = true;

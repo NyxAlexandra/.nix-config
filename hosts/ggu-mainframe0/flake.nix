@@ -66,7 +66,11 @@
             };
           };
 
-          networking = { inherit hostName; };
+          networking = {
+            inherit hostName;
+
+            networkmanager.enable = true;
+          };
 
           nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

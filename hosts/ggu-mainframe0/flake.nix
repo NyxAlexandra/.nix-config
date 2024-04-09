@@ -1,7 +1,6 @@
 {
   inputs = {
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:nixos/nixpkgs/c3e128f3c0ecc1fb04aef9f72b3dcc2f6cecf370";
+    nixpkgs.url = "github:nixos/nixpkgs/fd281bd6b7d3e32ddfa399853946f782553163b5";
     nixos-apple-silicon.url = "github:tpwrules/nixos-apple-silicon";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -33,8 +32,8 @@
 
       specialArgs = { inherit inputs system; };
       modules = [
-        nixos-apple-silicon.nixosModules.default
-        home-manager.nixosModules.default
+        nixos-apple-silicon.nixosModules.apple-silicon-support
+        home-manager.nixosModules.home-manager
 
         ./hardware-configuration.nix
         ./home-manager
@@ -74,7 +73,6 @@
           hardware.asahi = {
             peripheralFirmwareDirectory = ./firmware;
             extractPeripheralFirmware = true;
-            addEdgeKernelConfig = true;
             useExperimentalGPUDriver = true;
           };
 

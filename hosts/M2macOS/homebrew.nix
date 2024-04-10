@@ -1,11 +1,11 @@
-{ pkgs, ... }: {
+{ ... }: {
   homebrew = {
     enable = true;
     taps = [
       "koekeishiya/formulae"
     ];
     brews = [
-      "pinentry-mac" # Passphrase entry for `gpg`
+      "pinentry-mac" # passphrase entry for `gpg`
       "docker"
       "podman"
       "yabai"

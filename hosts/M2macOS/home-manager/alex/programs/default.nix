@@ -8,7 +8,8 @@
     ../../../../../modules/home-manager/kitty.nix
     ../../../../../modules/home-manager/nushell.nix
     ../../../../../modules/home-manager/zellij.nix
-    ./programs/gpg.nix
-    ./programs/direnv.nix
+
+    ./gpg.nix
+    ./direnv.nix
   ];
 }

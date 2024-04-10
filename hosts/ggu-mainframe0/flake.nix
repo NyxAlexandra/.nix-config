@@ -1,6 +1,5 @@
 {
   inputs = {
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/c3e128f3c0ecc1fb04aef9f72b3dcc2f6cecf370";
     nixos-apple-silicon.url = "github:tpwrules/nixos-apple-silicon";
     home-manager = {
@@ -36,9 +35,17 @@
         nixos-apple-silicon.nixosModules.default
         home-manager.nixosModules.default
 
-        ./modules
-
         ./hardware-configuration.nix
+        ./home-manager
+        ./boot.nix
+        ./console.nix
+        ./environment.nix
+        ./fonts.nix
+        ./hardware.nix
+        ./i18n.nix
+        ./programs.nix
+        ./services.nix
+        ./xdg.nix
 
         {
           users = {
@@ -58,18 +65,14 @@
               };
             };
           };
-
           networking = { inherit hostName; };
-
           nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
           hardware.asahi = {
             peripheralFirmwareDirectory = ./firmware;
             extractPeripheralFirmware = true;
             addEdgeKernelConfig = true;
             useExperimentalGPUDriver = true;
           };
-
           fileSystems = {
             "/".options = [ "subvol=tree" "compress=zstd:1" ];
             "/nix".options = [ "subvol=nix" "compress=zstd:1" "noatime" ];
@@ -78,13 +81,11 @@
             "/var/log".options = [ "subvol=log" "compress=zstd:1" ];
             "/etc".options = [ "subvol=etc" "compress=zstd:1" ];
           };
-
           boot.loader = {
             systemd-boot.enable = true;
             # U-Boot does not support EFI variables
             efi.canTouchEfiVariables = false;
           };
-
           system.stateVersion = "23.05";
          }
       ];

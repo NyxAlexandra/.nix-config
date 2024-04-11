@@ -183,9 +183,6 @@ themes {
 	}
 }
 
-theme "rose-pine"
-default_layout "minimal"
-
 plugins {
     tab-bar { path "tab-bar"; }
     status-bar { path "status-bar"; }
@@ -199,3 +196,7 @@ ui {
         hide_session_name true
     }
 }
+
+theme "rose-pine"
+default_layout "compact"
+mouse_mode false

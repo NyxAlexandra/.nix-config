@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   fonts = {
     # create `~/.local/share/fonts`
     fontDir.enable = true;

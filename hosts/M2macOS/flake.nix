@@ -28,11 +28,11 @@
         
         ./environment.nix
         ./fonts.nix
-        ./home-manager.nix
+        ./home-manager
         ./homebrew.nix
         ./networking.nix
         ./nix.nix
-        ./programs.nix
+        ./programs
         ./security.nix
         ./services.nix
         ./system.nix

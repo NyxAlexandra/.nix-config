@@ -199,4 +199,3 @@ ui {
 
 theme "rose-pine"
 default_layout "compact"
-mouse_mode false

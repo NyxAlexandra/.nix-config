@@ -2,7 +2,7 @@
   imports = [
     ../../../../../modules/home-manager/alacritty.nix
     ((import ../../../../../modules/home-manager/git.nix) {
-      signingKey = "0xA2F97DEE82E3F0C2";
+      signingKey = "0x9A36EB0099244C91";
     })
     ../../../../../modules/home-manager/helix.nix
     ../../../../../modules/home-manager/kitty.nix

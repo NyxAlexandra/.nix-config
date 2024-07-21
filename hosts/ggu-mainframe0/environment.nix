@@ -17,7 +17,6 @@
       wl-clipboard
       htop
       firefox
-      gnomeExtensions.just-perfection
       zig
       element-desktop
       wofi
@@ -27,6 +26,8 @@
       zls
       neovim
       vscode
+      protonvpn-gui
+      protonvpn-cli
     ];
     variables = {
       "EDITOR" = "hx";

@@ -15,9 +15,9 @@
     ];
 
     systemPath = [
-      "~/.cargo/bin"
       "/run/current-system/sw/bin"
       "/opt/homebrew/bin"
+      "~/.cargo/bin"
     ];
 
     shells = with pkgs; [ nushell ];

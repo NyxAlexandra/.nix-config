@@ -8,8 +8,10 @@
       nushell
       nixpkgs-fmt
       google-java-format
-      zig
-      zls
+      kotlin
+      ktfmt
+      ktlint
+      kotlin-language-server
     ];
 
     systemPath = [

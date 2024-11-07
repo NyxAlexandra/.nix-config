@@ -5,8 +5,10 @@ def create_left_prompt [] {
 
   let home = $env.HOME
   let dir = ([
+      # /Users/alex/Documents -> ~/
       ($env.PWD | str substring 0..($home | str length) | str replace $home "~"),
-      ($env.PWD | str substring ($home | str length)..)
+      # /User/alex/Documents -> Documents
+      ($env.PWD | str substring (($home | str length) + 1)..)
   ] | str join)
 
   $"($user)($at)($hostname) ($dir)\n\r"

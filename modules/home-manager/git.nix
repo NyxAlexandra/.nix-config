@@ -2,12 +2,14 @@
   programs.git = {
     enable = true;
     userName = "Alexandra Reaves";
-    userEmail = "nyxalexandra@proton.me";
+    userEmail = "alexandra+git@reaves.io";
     signing = {
       signByDefault = true;
-      key = "${signingKey}"; # acquired with `gpg --list-secret-keys --keyid-format=long`
+      # acquired with `gpg --list-secret-keys --keyid-format=long`
+      key = "${signingKey}";
     };
-    delta.enable = true; # Better diff highlighting
+    # Better diff highlighting
+    delta.enable = true;
     aliases = {
       a = "add";
       c = "commit";
@@ -17,6 +19,7 @@
       d = "diff";
     };
     extraConfig = {
+      init.defaultBranch = "main";
       pull.rebase = false;
       push.autoSetupRemote = true;
     };

@@ -2,7 +2,7 @@
   imports = [
     ../../../../../modules/home-manager/alacritty.nix
     ((import ../../../../../modules/home-manager/git.nix) {
-      signingKey = "0x9A36EB0099244C91";
+      signingKey = "538688FEA5D7BB67";
     })
     ../../../../../modules/home-manager/kitty.nix
     ../../../../../modules/home-manager/nushell.nix

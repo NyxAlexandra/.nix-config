@@ -11,7 +11,11 @@
     };
 
     helix = {
-      url = "github:mattwparas/helix/steel-event-system";      
+      url = "github:helix-editor/helix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hxs = {
+      url = "github:mattwparas/helix/steel-event-system";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     steel = {
@@ -24,12 +28,18 @@
     nixpkgs,
     nix-darwin,
     home-manager,
+
     helix,
+    hxs,
     steel,
     ...
   }: let
     system = "aarch64-darwin";
     pkgs = nixpkgs.legacyPackages.${system};
+    nixpkgs' = {
+      config = { allowUnfree = true; };
+      overlays = [ helix.overlays.default ];
+    };
   in {
     darwinConfigurations."M2macOS" = nix-darwin.lib.darwinSystem {
       inherit system;
@@ -51,6 +61,8 @@
         ./users.nix
 
         {
+          nixpkgs = nixpkgs';
+
           environment = {
             variables = {
               "STEEL_LSP_HOME" = "$HOME/.config/steel-language-server";
@@ -59,11 +71,13 @@
               racket
               chickenPackages_5.chickenEggs.scmfmt
 
-              (helix.packages.${system}.helix-unwrapped.overrideAttrs (prev: {
+              # install the mattwparas/hxs/steel-event-system fork as `hxs`
+              (hxs.packages.${system}.helix-unwrapped.overrideAttrs (prev: {
                 postInstall = prev.postInstall + ''
                   mv $out/bin/hx $out/bin/hxs
                 '';
               }))
+              # build the Steel language server
               (steel.packages.${system}.steel.overrideAttrs (prev: {
                 cargoBuildFlags = prev.cargoBuildFlags + " -p steel-language-server";
               }))

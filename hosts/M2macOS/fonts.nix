@@ -5,7 +5,8 @@
       noto-fonts-cjk-sans
       noto-fonts-emoji
       noto-fonts-extra
-			nerdfonts
-    ];
+    ] ++
+       builtins.filter lib.attrsets.isDerivation
+      (builtins.attrValues pkgs.nerd-fonts);
   };
 }
